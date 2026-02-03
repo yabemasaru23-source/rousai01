@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>げいのう労災 | フリーランスもみんな加入できる労災保険</title>
+    <meta name="description" content="フリーランスは労災に入れないという常識を覆します。休業補償、通勤災害もカバー。フリーランスもみんな加入できる「げいのう労災」。">
+    
+    <!-- Google Fonts -->
+    <linkpreconnect="https://fonts.googleapis.com">
+    <linkpreconnect="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#E0F2FE',
+                            DEFAULT: '#0284C7', // Sky 600
+                            dark: '#0369A1',    // Sky 700
+                            accent: '#F59E0B',  // Amber 500
+                        },
+                        line: {
+                            DEFAULT: '#06C755',
+                            hover: '#05b34c'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .clip-slant {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        .scroll-hidden::-webkit-scrollbar {
+            display: none;
+        }
+        .animate-bounce-slow {
+            animation: bounce 2s infinite;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased pb-24 md:pb-0">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed w-full z-50 transition-all duration-300" id="header">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <!-- 厚生労働省ロゴ & 認可団体表記 -->
+                <div class="flex flex-col items-start border-r border-slate-200 pr-3 mr-1">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/MHLW_symbol_mark.svg/200px-MHLW_symbol_mark.svg.png" alt="厚生労働省ロゴ" class="h-6 w-auto mb-1">
+                    <span class="text-[10px] font-bold text-slate-500 leading-none tracking-tighter">厚生労働省認可団体</span>
+                </div>
+                
+                <div class="flex flex-col md:flex-row md:items-end md:gap-2">
+                    <h1 class="font-bold text-lg md:text-xl text-slate-700 leading-tight">げいのう労災</h1>
+                    <span class="text-xs text-slate-500 font-medium hidden md:inline-block mb-0.5">フリーランスもみんな加入できる</span>
+                </div>
+            </div>
+            <a href="#line-section" class="hidden md:flex items-center gap-2 bg-line hover:bg-line-hover text-white px-6 py-2 rounded-full font-bold transition duration-300 shadow-lg">
+                <i class="fa-brands fa-line text-2xl"></i>
+                <span>友だち追加で相談</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-screen min-h-[600px] flex items-center justify-center text-white text-center px-4 relative">
+        <div class="max-w-4xl mx-auto mt-16">
+            <!-- 認可団体バッジ -->
+            <div class="inline-flex items-center gap-2 bg-white/90 text-slate-800 px-4 py-1.5 rounded-full mb-6 shadow-lg backdrop-blur-sm animate-bounce-slow">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/MHLW_symbol_mark.svg/200px-MHLW_symbol_mark.svg.png" alt="厚生労働省" class="h-5 w-auto">
+                <span class="font-bold text-sm tracking-wider">厚生労働省認可団体</span>
+            </div>
+
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-black leading-tight mb-6 drop-shadow-lg">
+                <span class="block text-2xl md:text-3xl font-bold mb-2 opacity-90">フリーランスは保険に入れない…</span>
+                その常識、<br class="md:hidden"><span class="text-brand-accent border-b-4 border-brand-accent">覆します。</span>
+            </h2>
+            <p class="text-lg md:text-xl mb-8 font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-md">
+                怪我や病気で働けない間の「収入」を補償。<br>
+                フリーランスもみんな加入できる<br class="md:hidden">「げいのう労災」をご存知ですか？
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <a href="#line-section" class="bg-line hover:bg-line-hover text-white text-lg md:text-xl font-bold py-4 px-10 rounded-full shadow-xl transition transform hover:scale-105 flex items-center gap-3 w-full md:w-auto justify-center">
+                    <i class="fa-brands fa-line text-3xl"></i>
+                    今すぐ詳細を聞く
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-8 animate-bounce">
+            <i class="fa-solid fa-chevron-down text-3xl opacity-70"></i>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h3 class="text-center text-2xl md:text-3xl font-bold mb-12 text-slate-700">
+                <span class="text-brand border-b-2 border-brand pb-1">こんなリスク</span>、抱えていませんか？
+            </h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 shadow-sm text-center">
+                    <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">🤕</div>
+                    <h4 class="font-bold text-lg mb-2">仕事中のケガ</h4>
+                    <p class="text-sm text-slate-600">現場や移動中の事故。治療費は全額自己負担だと思っていませんか？</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 shadow-sm text-center">
+                    <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">📉</div>
+                    <h4 class="font-bold text-lg mb-2">働けない間の収入</h4>
+                    <p class="text-sm text-slate-600">入院や自宅療養で仕事がストップ。その間の生活費はどうしますか？</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 shadow-sm text-center">
+                    <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">🚫</div>
+                    <h4 class="font-bold text-lg mb-2">現場に入れない</h4>
+                    <p class="text-sm text-slate-600">「労災に入っていないと契約できない」と元請けに言われたことは？</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution / What is Rousai -->
+    <section class="py-16 md:py-24 bg-brand-light clip-slant pb-32">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-12">
+                <span class="text-brand font-bold tracking-widest uppercase">Solution</span>
+                <h3 class="text-3xl md:text-4xl font-bold mt-2 text-slate-800">労災保険ってなに？</h3>
+                <p class="mt-4 text-slate-600 max-w-2xl mx-auto">
+                    本来は「雇われている人」のための保険ですが、<br class="hidden md:inline">
+                    フリーランスや個人事業主も<strong class="text-brand-dark bg-yellow-100 px-1">「特別加入制度」</strong>を利用することで、<br class="hidden md:inline">
+                    国の手厚い補償を受けることができます。
+                </p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden md:flex">
+                <div class="md:w-1/2 h-64 md:h-auto relative">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1632&q=80" alt="安心して働くフリーランス" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-brand/20"></div>
+                </div>
+                <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                    <h4 class="text-2xl font-bold mb-4 text-brand-dark">国の制度だから安心・安価</h4>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        民間の保険とは違い、国が運営する保険制度です。営利目的ではないため、掛金に対する補償の手厚さは圧倒的です。
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-green-500"></i>
+                            <span class="font-medium">治療費は実質0円（全額補償）</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-green-500"></i>
+                            <span class="font-medium">障害が残った場合の年金支給</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-green-500"></i>
+                            <span class="font-medium">万が一の時の遺族補償</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shocking Benefit: Kyugyo Hosho -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="bg-gradient-to-br from-brand-dark to-brand rounded-3xl p-8 md:p-12 text-white shadow-2xl transform -translate-y-24 md:-translate-y-32">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-2/3">
+                        <span class="bg-yellow-400 text-brand-dark px-3 py-1 rounded font-bold text-sm mb-2 inline-block">ここが一番の驚きポイント</span>
+                        <h3 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+                            え！<span class="text-yellow-300 border-b-4 border-yellow-300">休業補償</span>もあるの？
+                        </h3>
+                        <p class="text-lg opacity-90 leading-relaxed mb-6">
+                            「怪我で働けない＝収入ゼロ」ではありません。<br>
+                            労災保険なら、治療のために休業した期間（4日目から）、給付基礎日額の80%が支給されます。
+                        </p>
+                        <div class="bg-white/10 rounded-lg p-4 backdrop-blur-sm border border-white/20">
+                            <p class="font-bold text-sm mb-1">例えば…</p>
+                            <p class="text-lg">日額1万円の設定なら、1日休むごとに<br><span class="text-2xl font-bold text-yellow-300">8,000円</span> が支給されます。</p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/3 flex justify-center">
+                        <div class="w-32 h-32 md:w-40 md:h-40 bg-white rounded-full flex items-center justify-center text-brand-dark shadow-inner">
+                            <div class="text-center">
+                                <i class="fa-solid fa-hand-holding-dollar text-4xl md:text-5xl mb-2"></i>
+                                <div class="font-bold text-sm">生活を守る</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scope of Coverage -->
+            <div class="-mt-12">
+                <h3 class="text-center text-2xl md:text-3xl font-bold mb-10 text-slate-700">保障の範囲はどこまで？</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl border-l-8 border-brand shadow-md hover:shadow-lg transition">
+                        <h4 class="text-xl font-bold text-brand-dark mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-briefcase"></i> 業務災害
+                        </h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            仕事中の怪我や病気が対象です。クライアント先での作業中はもちろん、打ち合わせ中の移動や、業務に起因する病気も含まれます。
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border-l-8 border-brand-accent shadow-md hover:shadow-lg transition">
+                        <h4 class="text-xl font-bold text-brand-dark mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-train-subway"></i> 通勤災害
+                        </h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            自宅と仕事場の往復中の事故も対象です。現場への直行直帰や、シェアオフィスへの移動中に起きた事故も補償されます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Mission / Story -->
+    <section class="py-16 bg-slate-100">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="md:w-1/3">
+                    <img src="https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80" alt="代表者またはスタッフ" class="rounded-2xl shadow-lg w-full">
+                </div>
+                <div class="md:w-2/3">
+                    <h3 class="text-2xl font-bold mb-4 text-slate-800">労災保険をはじめた理由</h3>
+                    <p class="text-slate-600 mb-4 leading-relaxed">
+                        私自身、かつてはフリーランスとして活動していました。ある日、現場へ向かう途中で事故に遭い、数ヶ月間働けなくなった経験があります。その時、何の補償もなく貯金を切り崩す生活の恐怖を味わいました。
+                    </p>
+                    <p class="text-slate-600 mb-4 leading-relaxed">
+                        「自由な働き方を選んだから、自己責任」<br>
+                        そんな世間の風潮を変えたい。フリーランスでも安心して働ける環境を作りたい。その一心で、この労災保険事務組合を立ち上げました。
+                    </p>
+                    <p class="font-bold text-brand-dark">
+                        あなたの挑戦を、足元から支えさせてください。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h3 class="text-center text-2xl md:text-3xl font-bold mb-12 text-slate-700">よくある質問</h3>
+            <div class="space-y-4">
+                <details class="group bg-slate-50 p-4 rounded-lg border border-slate-200 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-slate-800 list-none">
+                        <span>Q. 保険料はいくらですか？</span>
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-brand"></i></span>
+                    </summary>
+                    <p class="text-slate-600 mt-4 text-sm leading-relaxed group-open:animate-fadeIn">
+                        給付基礎日額（補償額の設定）によって異なりますが、月額数千円程度から加入可能です。ご希望の補償内容に合わせてシミュレーションいたしますので、LINEにてお気軽にお問い合わせください。
+                    </p>
+                </details>
+
+                <details class="group bg-slate-50 p-4 rounded-lg border border-slate-200 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-slate-800 list-none">
+                        <span>Q. 加入手続きは難しいですか？</span>
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-brand"></i></span>
+                    </summary>
+                    <p class="text-slate-600 mt-4 text-sm leading-relaxed group-open:animate-fadeIn">
+                        いいえ、すべてオンラインで完結します。必要な書類も最低限ですので、最短で翌日から適用開始することも可能です。
+                    </p>
+                </details>
+
+                <details class="group bg-slate-50 p-4 rounded-lg border border-slate-200 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-slate-800 list-none">
+                        <span>Q. 特定の職種しか入れませんか？</span>
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-brand"></i></span>
+                    </summary>
+                    <p class="text-slate-600 mt-4 text-sm leading-relaxed group-open:animate-fadeIn">
+                        建設業の一人親方だけでなく、ITフリーランス、配送業、芸能従事者など、対象範囲は拡大しています。ご自身の職種が対象かどうかも、LINEですぐにお答えします。
+                    </p>
+                </details>
+
+                <details class="group bg-slate-50 p-4 rounded-lg border border-slate-200 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-slate-800 list-none">
+                        <span>Q. すでに民間の保険に入っていますが？</span>
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-brand"></i></span>
+                    </summary>
+                    <p class="text-slate-600 mt-4 text-sm leading-relaxed group-open:animate-fadeIn">
+                        民間の保険と労災保険は併用可能です。両方から給付を受け取ることができるため、より手厚い備えになります。特に休業補償の面で労災保険は非常に優秀です。
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Profile -->
+    <section class="py-16 bg-slate-100">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h3 class="text-center text-xl font-bold mb-8 text-slate-700">会社概要</h3>
+            <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                <div class="p-6 bg-slate-50 border-b border-slate-100 text-center">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm border border-slate-200">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/MHLW_symbol_mark.svg/200px-MHLW_symbol_mark.svg.png" alt="厚生労働省" class="h-6 w-auto">
+                        <span class="font-bold text-slate-700">厚生労働省認可団体</span>
+                    </div>
+                </div>
+                <table class="w-full text-sm text-left text-slate-600">
+                    <tbody class="divide-y divide-slate-100">
+                        <tr>
+                            <th class="px-6 py-4 font-medium text-slate-900 bg-slate-50 w-1/3">販売業者名</th>
+                            <td class="px-6 py-4">一般社団法人JAPAN ACTION GUILD</td>
+                        </tr>
+                        <tr>
+                            <th class="px-6 py-4 font-medium text-slate-900 bg-slate-50">代表責任者名</th>
+                            <td class="px-6 py-4">代表理事　矢部 大</td>
+                        </tr>
+                        <tr>
+                            <th class="px-6 py-4 font-medium text-slate-900 bg-slate-50">所在地</th>
+                            <td class="px-6 py-4">〒150-0043<br>東京都渋谷区道玄坂1丁目10番8号　渋谷道玄坂東急ビル2F−C</td>
+                        </tr>
+                        <tr>
+                            <th class="px-6 py-4 font-medium text-slate-900 bg-slate-50">メールアドレス</th>
+                            <td class="px-6 py-4">contact@rousai.or.jp</td>
+                        </tr>
+                        <tr>
+                            <th class="px-6 py-4 font-medium text-slate-900 bg-slate-50">ホームページURL</th>
+                            <td class="px-6 py-4"><a href="https://rousai.or.jp/" target="_blank" class="text-brand hover:underline">https://rousai.or.jp/</a></td>
+                        </tr>
+                        <tr>
+                            <th class="px-6 py-4 font-medium text-slate-900 bg-slate-50">お問い合わせ</th>
+                            <td class="px-6 py-4">公式LINEにて24時間受付中</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section (Bottom) -->
+    <section id="line-section" class="py-20 bg-gradient-to-t from-brand-light to-white text-center">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-slate-800">
+                まずは<span class="text-line">LINE</span>で<br>
+                お気軽にご相談ください
+            </h2>
+            <p class="text-slate-600 mb-8 text-lg">
+                「自分の職種は対象？」「保険料はいくら？」<br>
+                些細な疑問でも構いません。<br>
+                専任のスタッフが丁寧にお答えします。
+            </p>
+            
+            <div class="bg-white p-8 rounded-3xl shadow-xl border-4 border-slate-50 inline-block w-full">
+                <p class="text-sm text-slate-500 mb-2">＼ 30秒で完了！ ／</p>
+                <a href="https://line.me/ti/p/@050cfwlp" target="_blank" class="block w-full bg-line hover:bg-line-hover text-white text-xl md:text-2xl font-bold py-5 px-4 rounded-2xl shadow-lg transition transform hover:scale-105 mb-4 animate-pulse">
+                    <i class="fa-brands fa-line mr-2 text-3xl align-middle"></i>
+                    友だち追加して詳細を聞く
+                </a>
+                <p class="text-xs text-slate-400">ID: @050cfwlp</p>
+                <div class="mt-4 flex items-center justify-center gap-4 text-xs text-slate-500">
+                    <span class="flex items-center gap-1"><i class="fa-solid fa-check text-brand"></i> 無理な勧誘なし</span>
+                    <span class="flex items-center gap-1"><i class="fa-solid fa-check text-brand"></i> 無料相談</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-slate-400 py-8 text-center text-sm">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2024 JAPAN ACTION GUILD. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Fixed Bottom CTA for Mobile -->
+    <div class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 p-3 md:hidden z-50 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
+        <a href="#line-section" class="block bg-line text-white text-center font-bold py-3 rounded-xl shadow-md flex items-center justify-center gap-2">
+            <i class="fa-brands fa-line text-2xl"></i>
+            <span>LINEで詳細・見積もりを聞く</span>
+        </a>
+    </div>
+
+</body>
+</html>
